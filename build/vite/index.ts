@@ -12,9 +12,10 @@ import VueRouter from 'unplugin-vue-router/vite'
 import mockDevServerPlugin from 'vite-plugin-mock-dev-server'
 import { VitePWA } from 'vite-plugin-pwa'
 import Sitemap from 'vite-plugin-sitemap'
-import VueDevTools from 'vite-plugin-vue-devtools'
+// import VueDevTools from 'vite-plugin-vue-devtools'
 import Layouts from 'vite-plugin-vue-layouts'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
+import mkcert from 'vite-plugin-mkcert'
 import { createViteVConsole } from './vconsole'
 
 export function createVitePlugins() {
@@ -27,6 +28,8 @@ export function createVitePlugins() {
     }),
 
     vue(),
+
+    mkcert(),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
     Layouts(),
@@ -88,7 +91,7 @@ export function createVitePlugins() {
     createViteVConsole(),
 
     // https://github.com/vuejs/devtools-next
-    VueDevTools(),
+    // VueDevTools(),
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({

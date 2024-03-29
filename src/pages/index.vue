@@ -78,5 +78,5 @@ const menuItems = computed(() => ([
 
 <route lang="yaml">
   meta:
-    layout: home
+    layout: default
 </route>
